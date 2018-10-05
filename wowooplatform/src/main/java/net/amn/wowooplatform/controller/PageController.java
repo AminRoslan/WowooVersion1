@@ -12,29 +12,40 @@ public class PageController {
 	public ModelAndView index() {
 		
 		ModelAndView mv = new ModelAndView("page");
-		mv.addObject("greeting", "Welcome to Spring Web MVC");
+		mv.addObject("title", "Home");
+		mv.addObject("userClickHome", true);
 		return mv;
 		
 	}
 	
-//	@RequestMapping(value="/test")
-//	public ModelAndView test(@RequestParam(value="greeting", required=false)String greeting) {
-//		if(greeting == null) {
-//			greeting="Hello There";
-//		}
-//		ModelAndView mv = new ModelAndView("page");
-//		mv.addObject("greeting", greeting);
-//		return mv;
-//	}
-//	
-//	@RequestMapping(value="/test/{greeting}")
-//	public ModelAndView test(@PathVariable("greeting")String greeting) {
-//		if(greeting == null) {
-//			greeting="Hello There";
-//		}
-//		ModelAndView mv = new ModelAndView("page");
-//		mv.addObject("greeting", greeting);
-//		return mv;
-//	}
+	@RequestMapping(value = "/listOfProjects")
+	public ModelAndView listOfProjects() {
+		
+		ModelAndView mv = new ModelAndView("page");
+		mv.addObject("title", "List Of Projects");
+		mv.addObject("userClickListOfProjects", true);
+		return mv;
+		
+	}
+	
+	@RequestMapping(value = "/wallet")
+	public ModelAndView wallet() {
+		
+		ModelAndView mv = new ModelAndView("page");
+		mv.addObject("title", "Wallet");
+		mv.addObject("userClickWallet", true);
+		return mv;
+		
+	}
+	
+	@RequestMapping(value = "/kycInfo")
+	public ModelAndView kycInfo() {
+		
+		ModelAndView mv = new ModelAndView("page");
+		mv.addObject("title", "KYC Info");
+		mv.addObject("userClickKycInfo", true);
+		return mv;
+		
+	}
 	
 }
