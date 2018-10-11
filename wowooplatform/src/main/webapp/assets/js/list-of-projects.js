@@ -1,0 +1,5 @@
+$(function allFunction(){
+	
+	alert("done");
+	
+});
